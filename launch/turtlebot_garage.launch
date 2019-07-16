@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="model" default="$(find turtlebot)/urdf/turtlebot.urdf" />
+  <arg name="rvizconfig" default="$(find turtlebot)/rviz/turtlebot.rviz"/>
+
+  <include file="$(find gazebo_ros)/launch/willowgarage_world.launch" >
+  </include>
+
+  <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+  args="-urdf -model -unpause turtlebot -paramrobot_description -z 1.0" />
+
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+  <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+
+</launch>
+
