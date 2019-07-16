@@ -1,3 +1,5 @@
+<?xml version="1.0"?>
+
 <launch>
 
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
@@ -20,7 +22,7 @@
     <arg name="recording" value="$(arg recording)"/>
   </include>
 
-  <arg name="mode1" />
+  
   <param name="robot_description" command="$(find xacro)/xacro.py $(arg model)" />
 
   <!-- push robot_description to factory and spawn robot in gazebo -->

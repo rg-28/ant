@@ -1625,14 +1625,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherBase.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherBase.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Black"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherBase.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherBase.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -1658,14 +1658,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/F2Bracket.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/F2Bracket.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Red"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/F2Bracket.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/F2Bracket.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -1676,10 +1676,10 @@
   <transmission name="arm_shoulder_pan_transmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="arm_shoulder_pan_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="arm_shoulder_pan_actuator">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -1701,14 +1701,14 @@
     <visual>
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherBicep.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherBicep.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Red"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherBicep.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherBicep.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -1719,10 +1719,10 @@
   <transmission name="arm_bicep_transmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="arm_bicep_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="arm_bicep_actuator">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -1744,14 +1744,14 @@
     <visual>
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherForeArm.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherForeArm.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Red"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherForeArm.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherForeArm.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -1762,10 +1762,10 @@
   <transmission name="arm_forearm_transmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="arm_forearm_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="arm_forearm_actuator">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -1787,14 +1787,14 @@
     <visual>
       <origin rpy="0 0 0" xyz=" 0 0 0 "/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherWristGripper.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherWristGripper.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Red"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 0.0 0.0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherWristGripper.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherWristGripper.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -1805,10 +1805,10 @@
   <transmission name="arm_wrist_flex_transmission">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="arm_wrist_flex_joint">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="arm_wrist_flex_actuator">
-      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
   </transmission>
@@ -1831,14 +1831,14 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Red"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
@@ -1864,14 +1864,14 @@
     <visual>
       <origin rpy="3.14159 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
       </geometry>
       <material name="Red"/>
     </visual>
     <collision>
       <origin rpy="3.14159 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://phantomx_pincher_arm_description/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
+        <mesh filename="package://turtlebot/meshes/PincherFinger.stl" scale="1.0 1.0 1.0"/>
       </geometry>
     </collision>
   </link>
