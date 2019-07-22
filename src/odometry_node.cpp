@@ -6,7 +6,7 @@ int main(int argc, char** argv){
   ros::init(argc, argv, "odometry_node");
 
   ros::NodeHandle n;
-  ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("imu_link", 50);
+  ros::Publisher odom_pub = n.advertise<nav_msgs::Odometry>("odometry_node", 50);
   tf::TransformBroadcaster odom_broadcaster;
 
   double x = 0.0;
