@@ -14,6 +14,8 @@ find_package(catkin REQUIRED COMPONENTS
   tf
   gazebo_ros
   message_generation
+  geometry_msgs
+  nav_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,11 +108,11 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
+  INCLUDE_DIRS include
   LIBRARIES 
 	turtlebot
   CATKIN_DEPENDS
-	gazebo roscpp rospy std_msgs tf
+	gazebo roscpp rospy std_msgs tf nav_msgs geometry_msgs
   DEPENDS system_lib
 	gazebo_ros
 )
@@ -121,25 +123,24 @@ catkin_package(
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
-include_directories(
-# include
+include_directories(include
   ${catkin_INCLUDE_DIRS}
 )
 
 ## Declare a C++ library
-# add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/turtlebot.cpp
-# )
+## add_library(${turtlebot}
+##   src/${turtlebot}/turtlebot_move_wheel.cpp
+## )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+## add_dependencies(turtlebot_move_wheel ${${turtlebot}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/turtlebot_node.cpp)
+## add_executable(turtlebot_node src/turtlebot_move_wheel.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -149,12 +150,12 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+## add_dependencies(turtlebot_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+## target_link_libraries(turtlebot_node
+##   ${catkin_LIBRARIES}
+## )
 
 #############
 ## Install ##
@@ -171,18 +172,18 @@ include_directories(
 # )
 
 ## Mark executables and/or libraries for installation
- install(TARGETS turtlebot_node 
-#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
- )
+## install(TARGETS turtlebot_node
+##  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+##  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+##   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+## )
 
 ## Mark cpp header files for installation
- install(DIRECTORY include/${tutlebot}/
-   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-   FILES_MATCHING PATTERN "*.h"
-   PATTERN ".svn" EXCLUDE
- )
+## install(DIRECTORY include/${PROJECT_NAME}/
+##   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+##   FILES_MATCHING PATTERN "*.h"
+##   PATTERN ".svn" EXCLUDE
+## )
 
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
@@ -211,5 +212,7 @@ add_executable(tf_listener1 src/tf_listener.cpp)
 target_link_libraries(tf_listener1 ${catkin_LIBRARIES})
 add_executable(odometry_node src/odometry_node.cpp)
 target_link_libraries(odometry_node ${catkin_LIBRARIES})
-add_executable(turtlebot_fake_node src/turtlebot_fake_node.cpp)
-target_link_libraries(turtlebot_fake_node ${catkin_LIBRARIES})
+add_executable(turtlebot_move_wheel src/turtlebot_move_wheel.cpp)
+target_link_libraries(turtlebot_move_wheel ${catkin_LIBRARIES})
+add_executable(base_controller src/base_controller.cpp)
+target_link_libraries(base_controller ${catkin_LIBRARIES})

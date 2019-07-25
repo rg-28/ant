@@ -16,8 +16,8 @@
 
 /* Authors: Yoonseok Pyo */
 
-#ifndef TURTLEBOT_FAKE_H_
-#define TURTLEBOT_FAKE_H_
+#ifndef TURTLEBOT_MOVE_WHEEL_H_
+#define TURTLEBOT_MOVE_WHEEL_H_
 
 #include <math.h>
 
@@ -32,9 +32,9 @@
 #include <tf/transform_broadcaster.h>
 #include <nav_msgs/Odometry.h>
 
-#include <turtlebot3_msgs/SensorState.h>
+#include <kobuki_msgs/SensorState.h>
 
-#include "turtlebot_fake.h"
+#include "turtlebot_move_wheel.h"
 
 #define WHEEL_RADIUS                    0.033     // meter
 
@@ -58,8 +58,8 @@
 class TurtlebotFake
 {
  public:
-  Turtlebot3Fake();
-  ~Turtlebot3Fake();
+  TurtlebotFake();
+  ~TurtlebotFake();
   bool init();
   bool update();
 
@@ -111,4 +111,4 @@ class TurtlebotFake
   void updateTF(geometry_msgs::TransformStamped& odom_tf);
 };
 
-#endif // TURTLEBOT_FAKE_H_
+#endif // TURTLEBOT_MOVE_WHEEL_H_

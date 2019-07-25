@@ -1,4 +1,4 @@
-*******************************************************************************
+/*******************************************************************************
 * Copyright 2016 ROBOTIS CO., LTD.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +16,9 @@
 
 /* Authors: Yoonseok Pyo */
 
-#include <turtlebot/turtlebot_fake.h>
+#include"../include/turtlebot/turtlebot_move_wheel.h"
+
+#include <turtlebot/turtlebot_move_wheel.h>
 
 TurtlebotFake::TurtlebotFake()
 : nh_priv_("~")
@@ -234,8 +236,8 @@ bool TurtlebotFake::update()
 *******************************************************************************/
 int main(int argc, char* argv[])
 {
-  ros::init(argc, argv, "turtlebot_fake_node");
-  Turtlebot3Fake tb3fake;
+  ros::init(argc, argv, "turtlebot_move_wheel");
+  TurtlebotFake tb3fake;
 
   ros::Rate loop_rate(30);
 
