@@ -8,6 +8,8 @@
 	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
 	</node>
 
+	<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="1 0 0 0 0 0 1 base_link map 100" />
+
 	<node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen" >
 	<param name="publish_frequency" type="double" value="50.0" />
 	</node>
@@ -16,8 +18,8 @@
 	args="-urdf -param robot_description -z 0.1 -model turtlebot3_burger" respawn="false" output="screen" />
 
 	<node name="rviz" pkg="rviz" type="rviz" 
-	args=" -d $(find turtlebot/rviz/turtlebot.rviz"/>
+	args=" -d $(find turtlebot/rviz/mapping.rviz"/>
 
 	<node name="map_server" pkg="map_server" type="map_server" 
-	args="$(find turtlebot)/maps/map.yaml" />
+	args="$(find turtlebot)/maps/map10.yaml" />
 </launch>

@@ -65,6 +65,7 @@
   <depend>tf</depend>
   <depend>nav_msgs</depend>
   <depend>geometry_msgs</depend>
+  <depend>move_base</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
