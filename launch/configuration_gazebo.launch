@@ -19,5 +19,5 @@
 	args="-urdf -param robot_description -z 0.1 -model turtlebot3_burger" respawn="false" output="screen" />
 
 	<node name="rviz" pkg="rviz" type="rviz" 
-	args=" -d $(find turtlebot/rviz/mapping.rviz"/>
+	args=" -d $(find turtlebot/rviz/navigation.rviz"/>
 </launch>
