@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <launch>
-  <arg name="model" default="$(find turtlebot)/urdf/turtlebot3_burger.urdf.xacro" />
-  <arg name="rvizconfig" default="$(find turtlebot)/rviz/turtlebot.rviz"/>
+  <arg name="model" default="$(find ant)/urdf/turtlebot3_burger.urdf.xacro" />
+  <arg name="rvizconfig" default="$(find ant)/rviz/turtlebot.rviz"/>
 
   <include file="$(find gazebo_ros)/launch/willowgarage_world.launch">
   </include>

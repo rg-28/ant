@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(turtlebot)
+project(ant)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -207,13 +207,13 @@ include_directories(include
 # catkin_add_nosetests(test)
 
 
-add_executable(tf_broadcaster1 src/tf_broadcaster.cpp)
-target_link_libraries(tf_broadcaster1 ${catkin_LIBRARIES})
-add_executable(tf_listener1 src/tf_listener.cpp)
-target_link_libraries(tf_listener1 ${catkin_LIBRARIES})
-add_executable(odometry_node src/odometry_node.cpp)
-target_link_libraries(odometry_node ${catkin_LIBRARIES})
-add_executable(turtlebot_move_wheel src/turtlebot_move_wheel.cpp)
-target_link_libraries(turtlebot_move_wheel ${catkin_LIBRARIES})
-add_executable(base_controller src/base_controller.cpp)
-target_link_libraries(base_controller ${catkin_LIBRARIES})
+add_executable(tf_broadcaster1_ant src/tf_broadcaster.cpp)
+target_link_libraries(tf_broadcaster1_ant ${catkin_LIBRARIES})
+add_executable(tf_listener1_ant src/tf_listener.cpp)
+target_link_libraries(tf_listener1_ant ${catkin_LIBRARIES})
+add_executable(odometry_node_ant src/odometry_node.cpp)
+target_link_libraries(odometry_node_ant ${catkin_LIBRARIES})
+add_executable(turtlebot_move_wheel_ant src/turtlebot_move_wheel.cpp)
+target_link_libraries(turtlebot_move_wheel_ant ${catkin_LIBRARIES})
+add_executable(base_controller_ant src/base_controller.cpp)
+target_link_libraries(base_controller_ant ${catkin_LIBRARIES})
